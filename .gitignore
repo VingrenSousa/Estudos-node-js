@@ -1,8 +1,9 @@
 
 index/src/modulos.js
 index/index.js
-index/
+index
 *.ts
 *.json
 *.md
 node_modules/@types/node/LICENSE
+node_modules
