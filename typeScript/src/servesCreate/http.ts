@@ -1,7 +1,7 @@
 const http= require("http")
 
 const Porta=8080
-interface propsUser{
+export interface propsUser{
     name:string,
     idade:number
 }

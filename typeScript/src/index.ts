@@ -1,7 +1,3 @@
-const {Person} = require("./person")
-
-
-const MYperson = new Person('Vingren')
 
 //modulo path
 // const path = require("./modulosNativos/path")
@@ -10,4 +6,10 @@ const MYperson = new Person('Vingren')
 //modulo FS
 // const FS = require("./modulosNativos/FS")
 
-const serves=require("./servesCreate/http")
+// http node
+// const serves=require("./servesCreate/http")
+
+//express
+
+const serves=require("./servesCreate/mode_express");
+
