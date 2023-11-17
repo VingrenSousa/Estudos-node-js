@@ -18,5 +18,7 @@ bancoDados();
 
 //express
 
-// const serves=require("./servesCreate/mode_express");
+const serves=require("./servesCreate/mode_express");
+
+const test = require("../service/api.test")
 

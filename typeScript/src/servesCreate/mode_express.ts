@@ -1,4 +1,6 @@
 const Express = require("express")
+
+const userModel =require("../../models/user.model")
 import { propsUser } from "./http";
 const usuarios:propsUser[]=[
     {
@@ -16,6 +18,7 @@ const usuarios:propsUser[]=[
 ]
 
 const App = Express()
+App.use(Express.json())
 
 App.get("/",(req:any,res:any)=>{
     res.contentType("application/html")
@@ -27,5 +30,15 @@ App.get("/users",(req:any,res:any)=>{
     res.status(200)
     res.json(usuarios)
 });
+App.post('/users',async(req:any,response:any)=>{
+    try {
+        const user =await userModel.create(req.body)
+        response.status(201).json(user)
+    } catch (error) {
+        response.status(500)
+        
+    }
+    
+})
 const porta= 8080
 App.listen(porta,()=>console.log('rodando com express na porta '+porta));
