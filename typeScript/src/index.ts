@@ -1,3 +1,10 @@
+const dotenv =require('dotenv')
+dotenv.config();
+
+const bancoDados=require("../service/bancoDeDados")
+bancoDados();
+
+
 
 //modulo path
 // const path = require("./modulosNativos/path")
@@ -11,5 +18,5 @@
 
 //express
 
-const serves=require("./servesCreate/mode_express");
+// const serves=require("./servesCreate/mode_express");
 
